@@ -1,0 +1,18 @@
+<div class="stat-card">
+  <div class="content">
+    <div>
+      <p class="title">{{ title }}</p>
+      <div class="value">
+        <h3 class="number">{{ value }}</h3>
+        <span class="unit">{{ unit }}</span>
+      </div>
+      <div *ngIf="trend" class="trend" [class.up]="trend === 'up'" [class.down]="trend === 'down'">
+        <ng-icon [name]="'lucideTrending' + (trend === 'up' ? 'Up' : 'Down')" size="16"></ng-icon>
+        <span>{{ trendValue }}</span>
+      </div>
+    </div>
+    <div class="icon">
+      <ng-icon [name]="icon" size="24"></ng-icon>
+    </div>
+  </div>
+</div>

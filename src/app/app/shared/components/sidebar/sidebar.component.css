@@ -1,0 +1,107 @@
+.sidebar {
+  background-color: #111827;
+  color: white;
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  position: fixed;
+  z-index: 50;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+@media (min-width: 768px) {
+  .sidebar {
+    transform: translateX(0);
+    position: relative;
+  }
+}
+.header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #374151;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.flame-icon {
+  color: #ef4444;
+  margin-right: 0.5rem;
+}
+.subtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+.nav {
+  flex: 1;
+  padding: 1rem;
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.nav-item {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.nav-item:hover {
+  transform: translateX(5px);
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+.nav-link:hover {
+  background-color: #374151;
+}
+.nav-link.active {
+  background-color: #dc2626;
+  color: white;
+}
+.nav-icon {
+  margin-right: 0.75rem;
+}
+.user {
+  padding: 1rem;
+  border-top: 1px solid #374151;
+  display: flex;
+  align-items: center;
+}
+.user-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-icon-inner {
+  color: white;
+}
+.user-info {
+  margin-left: 0.75rem;
+}
+.user-name {
+  font-weight: 500;
+  margin: 0;
+}
+.user-email {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0;
+}

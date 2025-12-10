@@ -1,0 +1,61 @@
+<div class="devices-container">
+  <div class="devices-list-card">
+    <div class="devices-header">
+      <h3 class="header-title">Устройства системы отопления</h3>
+      <button class="add-btn">
+        + Добавить устройство
+      </button>
+    </div>
+    <div class="devices-grid">
+      <app-device-tile 
+        *ngFor="let device of deviceStatus" 
+        [device]="device">
+      </app-device-tile>
+    </div>
+  </div>
+
+  <div class="topology-card">
+    <h3 class="card-title">Топология системы</h3>
+    <div class="topology-box">
+      <div class="center-node">
+        <ng-icon name="lucideHome" size="32" class="center-icon"></ng-icon>
+      </div>
+      <div class="nodes-grid">
+        <div class="node-item">
+          <div class="node-circle bg-red-100">
+            <ng-icon name="lucideWifi" size="24" class="node-icon text-red-500"></ng-icon>
+          </div>
+          <span class="node-label">Котел</span>
+        </div>
+        <div class="node-item">
+          <div class="node-circle bg-red-100">
+            <ng-icon name="lucideWifi" size="24" class="node-icon text-red-500"></ng-icon>
+          </div>
+          <span class="node-label">Гостиная</span>
+        </div>
+        <div class="node-item">
+          <div class="node-circle bg-red-100">
+            <ng-icon name="lucideWifi" size="24" class="node-icon text-red-500"></ng-icon>
+          </div>
+          <span class="node-label">Спальня</span>
+        </div>
+        <div class="node-item">
+          <div class="node-circle bg-red-200">
+            <ng-icon name="lucideWifi" size="24" class="node-icon text-red-600"></ng-icon>
+          </div>
+          <span class="node-label">Кухня</span>
+        </div>
+        <div class="node-item">
+          <div class="node-circle bg-red-100">
+            <ng-icon name="lucideWifi" size="24" class="node-icon text-red-500"></ng-icon>
+          </div>
+          <span class="node-label">Кабинет</span>
+        </div>
+      </div>
+      <p class="topology-desc">
+        Система использует mesh-сеть на базе протокола Zigbee 3.0 с центральным шлюзом. 
+        Все устройства находятся в радиусе действия друг друга, обеспечивая отказоустойчивость.
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+.alert-item {
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-left: 4px solid;
+}
+.alert-item.critical {
+  border-left-color: #ef4444;
+  background-color: #fef2f2;
+}
+.alert-item.warning {
+  border-left-color: #f59e0b;
+  background-color: #fff7ed;
+}
+.alert-item.info {
+  border-left-color: #3b82f6;
+  background-color: #eff6ff;
+}
+.alert-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.title {
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+.message {
+  color: #6b7280;
+  margin: 0.25rem 0 0.5rem;
+}
+.time {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+.clock-icon {
+  margin-right: 0.25rem;
+}
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.action-btn {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+.action-btn.primary {
+  background-color: #dc2626;
+  color: white;
+}
+.action-btn.primary:hover {
+  background-color: #b91c1c;
+}
+.action-btn:not(.primary) {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+.action-btn:not(.primary):hover {
+  background-color: #d1d5db;
+}

@@ -1,0 +1,10 @@
+<div class="event-item">
+  <div class="dot" [class]="getDotColor()"></div>
+  <div class="content">
+    <p class="message">{{ event.message }}</p>
+    <div class="time">
+      <ng-icon name="lucideClock" size="14" class="clock-icon"></ng-icon>
+      <span>{{ event.time }}</span>
+    </div>
+  </div>
+</div>

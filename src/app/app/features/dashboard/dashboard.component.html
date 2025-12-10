@@ -1,0 +1,93 @@
+<!-- Stats -->
+<div class="stats-grid">
+  <app-stat-card 
+    title="Текущее потребление" 
+    value="24.7" 
+    unit="кВт·ч" 
+    icon="lucideFlame" 
+    trend="up" 
+    trendValue="+12.4%"
+  ></app-stat-card>
+  <app-stat-card 
+    title="Средняя температура" 
+    value="21.8" 
+    unit="°C" 
+    icon="lucideThermometer" 
+    trend="down" 
+    trendValue="-0.5°C"
+  ></app-stat-card>
+  <app-stat-card 
+    title="Суточное потребление" 
+    value="185.2" 
+    unit="кВт·ч" 
+    icon="lucideCalendar" 
+    trend="down" 
+    trendValue="-3.6%"
+  ></app-stat-card>
+  <app-stat-card 
+    title="Прогноз на месяц" 
+    value="4,320" 
+    unit="кВт·ч" 
+    icon="lucideTrendingUp"
+  ></app-stat-card>
+</div>
+
+<!-- Charts -->
+<div class="charts-grid">
+  <div class="chart-card">
+    <h3 class="chart-title">Потребление за сутки</h3>
+    <div class="chart-container">
+      <ngx-charts-line-chart
+        [view]="[700, 300]"
+        [scheme]="colorScheme"
+        [results]="hourlyChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="true"
+        [showXAxisLabel]="false"
+        [showYAxisLabel]="true"
+        yAxisLabel="кВт·ч"
+        [timeline]="false"
+      ></ngx-charts-line-chart>
+    </div>
+  </div>
+  <div class="chart-card">
+    <h3 class="chart-title">Структура потребления</h3>
+    <div class="chart-container">
+      <ngx-charts-pie-chart
+        [view]="[400, 300]"
+        [scheme]="colorScheme"
+        [results]="pieData"
+        [labels]="true"
+        [doughnut]="true"
+      ></ngx-charts-pie-chart>
+    </div>
+  </div>
+</div>
+
+<!-- Devices & Events -->
+<div class="content-grid">
+  <div class="devices-card">
+    <div class="card-header">
+      <h3 class="card-title">Статус устройств</h3>
+      <span class="online-badge">
+        {{ getOnlineCount() }} из {{ deviceStatus.length }} онлайн
+      </span>
+    </div>
+    <div class="devices-list">
+      <app-device-card 
+        *ngFor="let device of deviceStatus" 
+        [device]="device"
+      ></app-device-card>
+    </div>
+  </div>
+  <div class="events-card">
+    <h3 class="card-title">Последние события</h3>
+    <div class="events-list">
+      <app-event-item 
+        *ngFor="let event of events" 
+        [event]="event"
+      ></app-event-item>
+    </div>
+  </div>
+</div>

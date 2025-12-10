@@ -1,0 +1,106 @@
+<div class="settings-container">
+  <div class="settings-card">
+    <h3 class="card-title">Общие настройки системы</h3>
+    <div class="settings-grid">
+      <div class="settings-column">
+        <div class="setting-group">
+          <h4 class="group-title">Настройки температуры</h4>
+          <div class="range-setting">
+            <label class="range-label">Комфортная температура (день)</label>
+            <div class="range-control">
+              <input type="range" min="18" max="26" value="22">
+              <span class="range-value">22°C</span>
+            </div>
+          </div>
+          <div class="range-setting">
+            <label class="range-label">Экономичная температура (ночь)</label>
+            <div class="range-control">
+              <input type="range" min="15" max="22" value="18">
+              <span class="range-value">18°C</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <h4 class="group-title">Расписание работы</h4>
+          <div class="schedule-item">
+            <span class="schedule-name">Будние дни</span>
+            <div class="schedule-time">
+              <span>07:00-23:00</span>
+              <button class="schedule-edit">
+                <ng-icon name="lucideSettings" size="16"></ng-icon>
+              </button>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-name">Выходные</span>
+            <div class="schedule-time">
+              <span>09:00-22:00</span>
+              <button class="schedule-edit">
+                <ng-icon name="lucideSettings" size="16"></ng-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-column">
+        <div class="setting-group">
+          <h4 class="group-title">Параметры системы</h4>
+          <div class="range-setting">
+            <label class="range-label">Порог срабатывания аварийного отключения</label>
+            <div class="range-control">
+              <input type="range" min="80" max="100" value="90">
+              <span class="range-value">90°C</span>
+            </div>
+          </div>
+          <div class="select-setting">
+            <label class="select-label">Интервал опроса датчиков</label>
+            <select class="select-input">
+              <option>1 минута</option>
+              <option>5 минут</option>
+              <option>15 минут</option>
+              <option selected>30 минут</option>
+              <option>1 час</option>
+            </select>
+          </div>
+          <div class="checkbox-setting">
+            <label class="checkbox-label">
+              <input type="checkbox" checked>
+              <span>Автоматическая оптимизация графика</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <h4 class="group-title">Интеграции</h4>
+          <div class="integration-item">
+            <div class="integration-icon bg-blue-100">
+              <ng-icon name="lucideWifi" size="20" class="text-blue-600"></ng-icon>
+            </div>
+            <div class="integration-info">
+              <p class="integration-name">Сервер мониторинга</p>
+              <p class="integration-desc">cloud.smarthome.ru</p>
+            </div>
+            <span class="integration-status status-active">Подключено</span>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon bg-gray-200">
+              <ng-icon name="lucideSettings" size="20" class="text-gray-500"></ng-icon>
+            </div>
+            <div class="integration-info">
+              <p class="integration-name">Система уведомлений</p>
+              <p class="integration-desc">SMS и Email</p>
+            </div>
+            <span class="integration-status status-warning">Настроить</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions-bar">
+      <button class="btn-cancel">Отмена</button>
+      <button class="btn-save">Сохранить изменения</button>
+    </div>
+  </div>
+</div>

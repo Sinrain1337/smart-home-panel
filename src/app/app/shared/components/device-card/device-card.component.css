@@ -1,0 +1,65 @@
+.device-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.device-card.offline {
+  opacity: 0.7;
+}
+.device-info {
+  display: flex;
+  align-items: center;
+}
+.icon-wrapper {
+  border-radius: 9999px;
+  padding: 0.5rem;
+}
+.device-details {
+  margin-left: 1rem;
+}
+.name {
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0;
+}
+.temp {
+  display: flex;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+.temp-icon {
+  color: #6b7280;
+  margin-right: 0.25rem;
+}
+.temp-value {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+.battery-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.battery {
+  display: flex;
+  align-items: center;
+}
+.battery-icon {
+  color: #6b7280;
+  margin-right: 0.25rem;
+}
+.battery-value {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+.status {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}

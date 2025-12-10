@@ -1,0 +1,42 @@
+<div class="app-container">
+  <app-sidebar
+    [sidebarOpen]="sidebarOpen"
+    [activeTab]="activeTab"
+    (tabChange)="onTabChange($event)"
+    (toggleSidebar)="toggleSidebar()"
+  ></app-sidebar>
+
+  <div class="main-content">
+    <header class="app-header">
+      <div class="header-left">
+        <button 
+          (click)="toggleSidebar()"
+          class="menu-btn"
+        >
+          <ng-icon 
+            [name]="sidebarOpen ? 'lucideX' : 'lucideMenu'" 
+            size="20"
+          ></ng-icon>
+        </button>
+        <h2 class="page-title">{{ getTabTitle() }}</h2>
+      </div>
+      <div class="header-right">
+        <div class="time-info">
+          <p class="date-text">{{ formatDate(currentTime) }}</p>
+          <p class="time-text">{{ formatTime(currentTime) }}</p>
+        </div>
+        <div class="shield-icon">
+          <ng-icon name="lucideShield" size="20" class="shield-inner"></ng-icon>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <app-dashboard *ngIf="activeTab === 'dashboard'"></app-dashboard>
+      <app-consumption *ngIf="activeTab === 'consumption'"></app-consumption>
+      <app-devices *ngIf="activeTab === 'devices'"></app-devices>
+      <app-alerts *ngIf="activeTab === 'alerts'"></app-alerts>
+      <app-settings *ngIf="activeTab === 'settings'"></app-settings>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+.devices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.devices-list-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+.devices-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.header-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+.add-btn {
+  background-color: #dc2626;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background-color: #b91c1c;
+}
+.devices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.topology-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1.5rem;
+}
+.topology-box {
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+}
+.center-node {
+  width: 4rem;
+  height: 4rem;
+  background-color: #dc2626;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+.center-icon {
+  color: white;
+}
+.nodes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.node-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.node-circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.node-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+.topology-desc {
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}

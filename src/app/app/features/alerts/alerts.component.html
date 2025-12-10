@@ -1,0 +1,63 @@
+<div class="alerts-container">
+  <div class="alerts-list-card">
+    <div class="alerts-header">
+      <h3 class="header-title">Центр оповещений</h3>
+      <div class="filter-buttons">
+        <button class="filter-btn">Все</button>
+        <button class="filter-btn filter-critical">Критические (3)</button>
+        <button class="filter-btn filter-warning">Предупреждения (5)</button>
+        <button class="filter-btn filter-info">Информация (12)</button>
+      </div>
+    </div>
+    <div class="alerts-list">
+      <app-alert-item 
+        *ngFor="let alert of alerts" 
+        [alert]="alert">
+      </app-alert-item>
+    </div>
+  </div>
+
+  <div class="settings-grid">
+    <div class="settings-card">
+      <h3 class="card-title">Настройки оповещений</h3>
+      <div class="setting-item">
+        <div class="setting-info">
+          <p class="setting-label">Критические ошибки</p>
+          <p class="setting-desc">Перегрев, утечка, отказ оборудования</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-item">
+        <div class="setting-info">
+          <p class="setting-label">Предупреждения</p>
+          <p class="setting-desc">Низкий заряд, отклонения от нормы</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider slider-warning"></span>
+        </label>
+      </div>
+      <div class="setting-item">
+        <div class="setting-info">
+          <p class="setting-label">Информационные сообщения</p>
+          <p class="setting-desc">Регулярные отчеты, оптимизация</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider slider-info"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="history-card">
+      <h3 class="card-title">История событий</h3>
+      <div class="history-item" *ngFor="let item of historyData">
+        <span class="history-date">{{ item.date }}</span>
+        <span class="history-count">{{ item.count }} событий</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="device-tile">
+  <div class="header" [class.online]="device.status === 'online'">
+    <div class="device-info">
+      <h4 class="name">{{ device.name }}</h4>
+      <div class="temp">
+        <ng-icon name="lucideThermometer" size="16" class="temp-icon"></ng-icon>
+        <span class="temp-value">{{ device.temp }}°C</span>
+      </div>
+    </div>
+    <span class="status-badge" [class]="getStatusClass()">
+      {{ device.status === 'online' ? 'Онлайн' : 'Офлайн' }}
+    </span>
+  </div>
+  <div class="footer">
+    <div class="battery-section">
+      <div class="battery-label">
+        <span class="label">Заряд батареи</span>
+        <span class="value">{{ device.battery }}%</span>
+      </div>
+      <div class="battery-bar">
+        <div class="bar-fill" [class]="getBatteryColor()" [style.width.%]="device.battery"></div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn secondary">Настройки</button>
+      <button class="btn primary">Управление</button>
+    </div>
+  </div>
+</div>

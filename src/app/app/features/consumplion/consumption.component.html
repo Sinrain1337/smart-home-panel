@@ -1,0 +1,75 @@
+<div class="consumption-container">
+  <div class="chart-card">
+    <h3 class="chart-title">Анализ потребления за неделю</h3>
+    <div class="chart-wrapper">
+      <ngx-charts-bar-vertical
+        [view]="[700, 400]"
+        [scheme]="colorScheme"
+        [results]="dailyChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="true"
+        [showXAxisLabel]="false"
+        [showYAxisLabel]="true"
+        yAxisLabel="кВт·ч"
+        [animations]="true"
+      >
+      </ngx-charts-bar-vertical>
+    </div>
+  </div>
+
+  <div class="comparison-grid">
+    <div class="comparison-card">
+      <h3 class="card-title">Сравнение с прошлым месяцем</h3>
+      <div class="comparison-item">
+        <span class="label">Текущий месяц</span>
+        <span class="value">4,120 кВт·ч</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 85%; background-color: #dc2626;"></div>
+      </div>
+      <div class="comparison-item">
+        <span class="label">Прошлый месяц</span>
+        <span class="value">4,320 кВт·ч</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 90%; background-color: #6b7280;"></div>
+      </div>
+      <div class="savings">
+        <ng-icon name="lucideTrendingDown" size="20" class="savings-icon"></ng-icon>
+        <span class="savings-text">Экономия: 200 кВт·ч (-4.6%)</span>
+      </div>
+    </div>
+
+    <div class="recommendations-card">
+      <h3 class="card-title">Рекомендации по оптимизации</h3>
+      <div class="recommendation-item">
+        <div class="icon-box bg-red-100">
+          <ng-icon name="lucideFlame" size="20" class="text-red-600"></ng-icon>
+        </div>
+        <div class="text-box">
+          <h4 class="rec-title">Оптимизация графика отопления</h4>
+          <p class="rec-desc">Снижение температуры на 1°C в ночное время может сэкономить до 6% энергии</p>
+        </div>
+      </div>
+      <div class="recommendation-item">
+        <div class="icon-box bg-blue-100">
+          <ng-icon name="lucideThermometer" size="20" class="text-blue-600"></ng-icon>
+        </div>
+        <div class="text-box">
+          <h4 class="rec-title">Балансировка системы</h4>
+          <p class="rec-desc">Текущая разница температур между помещениями: 4.2°C. Рекомендуемая: ≤2°C</p>
+        </div>
+      </div>
+      <div class="recommendation-item">
+        <div class="icon-box bg-green-100">
+          <ng-icon name="lucideShield" size="20" class="text-green-600"></ng-icon>
+        </div>
+        <div class="text-box">
+          <h4 class="rec-title">Техническое обслуживание</h4>
+          <p class="rec-desc">Рекомендуется провести очистку теплообменника в течение следующих 30 дней</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

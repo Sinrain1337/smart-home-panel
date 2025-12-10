@@ -1,0 +1,23 @@
+<div class="device-card" [class.offline]="device.status === 'offline'">
+  <div class="device-info">
+    <div class="icon-wrapper" [class]="getBgColor()">
+      <ng-icon name="lucideWifi" size="20" [class]="getIconColor()"></ng-icon>
+    </div>
+    <div class="device-details">
+      <h4 class="name">{{ device.name }}</h4>
+      <div class="temp">
+        <ng-icon name="lucideThermometer" size="14" class="temp-icon"></ng-icon>
+        <span class="temp-value">{{ device.temp }}°C</span>
+      </div>
+    </div>
+  </div>
+  <div class="battery-info">
+    <div class="battery">
+      <ng-icon name="lucideBattery" size="16" class="battery-icon"></ng-icon>
+      <span class="battery-value">{{ device.battery }}%</span>
+    </div>
+    <span class="status" [class]="getStatusClass()">
+      {{ device.status === 'online' ? 'Онлайн' : 'Офлайн' }}
+    </span>
+  </div>
+</div>

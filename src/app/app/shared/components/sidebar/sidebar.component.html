@@ -1,0 +1,38 @@
+<aside 
+  class="sidebar"
+  [class.open]="sidebarOpen"
+>
+  <div class="header">
+    <h1 class="title">
+      <ng-icon name="lucideFlame" class="flame-icon"></ng-icon>
+      Умный Дом
+    </h1>
+    <p class="subtitle">Мониторинг тепловой энергии</p>
+  </div>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li 
+        *ngFor="let item of navItems" 
+        class="nav-item"
+        (click)="onTabClick(item.id)"
+      >
+        <div 
+          class="nav-link"
+          [class.active]="activeTab === item.id"
+        >
+          <ng-icon [name]="item.icon" class="nav-icon" size="20"></ng-icon>
+          <span>{{ item.label }}</span>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="user">
+    <div class="user-icon">
+      <ng-icon name="lucideUsers" size="20" class="user-icon-inner"></ng-icon>
+    </div>
+    <div class="user-info">
+      <p class="user-name">Администратор</p>
+      <p class="user-email">admin<span aria-hidden>a</span>smarthome.ru</p>
+    </div>
+  </div>
+</aside>

@@ -1,0 +1,20 @@
+<div class="alert-item" [class]="getTypeClass()">
+  <div class="alert-header">
+    <h4 class="title">{{ alert.title }}</h4>
+    <span class="badge" [class]="getBadgeClass()">{{ getBadgeText() }}</span>
+  </div>
+  <p class="message">{{ alert.message }}</p>
+  <div class="time">
+    <ng-icon name="lucideClock" size="14" class="clock-icon"></ng-icon>
+    <span>{{ alert.time }}</span>
+  </div>
+  <div class="actions">
+    <button 
+      *ngFor="let action of alert.actions; let i = index"
+      class="action-btn"
+      [class.primary]="i === 0"
+    >
+      {{ action }}
+    </button>
+  </div>
+</div>
